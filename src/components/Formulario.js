@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import uuid from 'uuid/v4';
 
 const Formulario = () => {
 
@@ -37,6 +38,9 @@ const Formulario = () => {
             return; 
             // Agregamos un return para que si hay un error, no continue.
         }
+
+        // Eliminar el mensaje previo
+        actualizarError(false);
 
         // Asignar un ID
 
