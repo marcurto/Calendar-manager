@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import Formulario from './components/Formulario'
-import Cita from './components/Cita'
+import Formulario from './components/Formulario';
+import Cita from './components/Cita';
+import PropTypes from 'prop-types';
 
 function App() {
 
@@ -17,6 +18,8 @@ function App() {
   // Debemos añadir un array vacío para que la consulta solo se haga una vez. Si no, por ejemplo cuando llamamos a una API, de va a ciclar
   // En este caso, le añadimos [citas] para que se actualice cada vez que hacemos un cambio en citas. Es similar a componentDidMount o un componentDidUpdate
   useEffect( () => {
+    let citasIniciales = JSON.parse(localStorage.getItem('citas'));
+
     if(citasIniciales){
       localStorage.setItem('citas', JSON.stringify(citas))
     } else {
@@ -68,5 +71,10 @@ function App() {
     </Fragment>
   );
 }
+
+Formulario.propTypes = {
+  crearCita: PropTypes.func.isRequired
+}
+
 
 export default App;
