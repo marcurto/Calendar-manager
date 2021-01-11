@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import uuid from 'react-uuid';
 
-const Formulario = ({crearCita}) => {
+const Formulario = ({ crearCita }) => {
 
     //Creamos State de Citas
     const [cita, actualizarCita] = useState({
@@ -13,7 +13,7 @@ const Formulario = ({crearCita}) => {
     })
 
     // Agregamos un segundo state para las validaciones
-    const [ error, actualizarError ] = useState(false)
+    const [error, actualizarError] = useState(false)
 
     //Función que se ejecuta cada vez que un usuario escribe en un input
     //En este caso, utilizamos un onChange, por lo que el evento debe ser llamado continuamente (siempre que el usuario escriba algo en el formulario)
@@ -33,9 +33,9 @@ const Formulario = ({crearCita}) => {
 
         // Validar; Usamos .trim() para eliminar espacios en blanco
 
-        if(mascota.trim() === '' || propietario.trim() === '' || fecha.trim() === '' || hora.trim() === '' || sintomas.trim() === ''){
+        if (mascota.trim() === '' || propietario.trim() === '' || fecha.trim() === '' || hora.trim() === '' || sintomas.trim() === '') {
             actualizarError(true);
-            return; 
+            return;
             // Agregamos un return para que si hay un error, no continue.
         }
 
@@ -49,7 +49,13 @@ const Formulario = ({crearCita}) => {
         crearCita(cita);
 
         // Reiniciar el form
-
+        actualizarCita({
+            mascota: '',
+            propietario: '',
+            fecha: '',
+            hora: '',
+            sintomas: ''
+        })
 
     }
 
