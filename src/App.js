@@ -4,13 +4,24 @@ import Cita from './components/Cita'
 
 function App() {
 
+  // Citas en local storage
+  let citasIniciales = JSON.parse(localStorage.getItem('citas'));
+  if(!citasIniciales) {
+    citasIniciales = [];
+  }
+
   //Array de citas
-  const [citas, guardarCitas] = useState([]);
+  const [citas, guardarCitas] = useState(citasIniciales);
 
   // useEffect para realizar diferentes operaciones cuando el estado cambia
   // Debemos añadir un array vacío para que la consulta solo se haga una vez. Si no, por ejemplo cuando llamamos a una API, de va a ciclar
+  // En este caso, le añadimos [citas] para que se actualice cada vez que hacemos un cambio en citas. Es similar a componentDidMount o un componentDidUpdate
   useEffect( () => {
-    console.log('algo paso con las citas');
+    if(citasIniciales){
+      localStorage.setItem('citas', JSON.stringify(citas))
+    } else {
+      localStorage.setItem('citas', JSON.stringify([]))
+    }
   }, [citas])
 
   // Función que coja las citas actuales y agregue la nueva
