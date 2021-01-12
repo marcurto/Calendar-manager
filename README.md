@@ -1,26 +1,26 @@
-# Adminsitrador de agenda
+# Calendar manager
 
-*Administrador de agenda* es un proyecto pequeño realizado con la finalidad de practicar la creación de formularios validados en React.js con Hooks. Su funcionalidad es la de introducir los datos propios de una reunión laboral que van a guardarse en el Local Storage y que van a mostrarse en forma de tarjeta a medida que se van creando.  A su vez, también podrán ser eliminadas cuando se considere.
+*Calendar manager* is a small project made in order to practice creating validated forms in React.js with Hooks. Its functionality is to enter the data of a work meeting that will be saved in the Local Storage and that will be displayed as a card as they are created. In turn, they may also be eliminated when considered.
 
-El deploy de la aplicación se ha hecho con Netlify y podéis consultarlo [aquí](https://competent-saha-ca109a.netlify.app/).
+The application has been deployed with Netlify and you can check it [here](https://competent-saha-ca109a.netlify.app/).
 
 
 
-## Descripción
+## Description
 
-Se trata de un proyecto frontend que ha sido creado a partir del CLI *create-react-app* y en el que se ha utilizado *React.js* combinado con *react Hooks* para crear la interface de usuario. No tiene backend, pero sí la posibilidad de guardar las citas creadas en el *Local Storage*.
+It is a frontend project that has been created from the CLI **create-react-app**  and in which React.js  has been used combined with **react Hooks** to create the user interface. It does not have a backend, but it does have the possibility to save the appointments created in the **Local Storage**.
 
 
 
 ### Herramientas utilizadas
 
-A parte de las herramientas principales, también se han utilizado otras muy interesantes para mejorar el proyecto:
+Apart from the main tools, other very interesting tools have also been used to improve the project:
 
-- *Skeleton* (CSS framework) para maquetar el diseño
-- Neumorphism para el diseño del formulario
-- *React uuid* para asignar un id individual a cada cita creada
-- *PropTypes* para documentar y verificar los componentes creados
-- *Netlify* para realizar el deploy
+-  *Skeleton* (CSS framework) to layout the design
+- *Neumorphism* for web page design
+- *React uuid* to assign an individual id to each created appointment
+- *PropTypes* to document and verify the created components 
+- *Netlify* to perform the deploy
 
 
 
