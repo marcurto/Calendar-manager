@@ -66,22 +66,22 @@ const Formulario = ({ crearCita }) => {
             {error ? <p className="alerta-error">Todos los campos son obligatorios</p> : null}
 
             <form onSubmit={submitCita}>
-                <label>Nombre Mascota</label>
+                <label>Asunto</label>
                 <input
                     type='text'
                     name='mascota'
                     className="u-full-width"
-                    placeholder='Nombre mascota'
+                    placeholder='Introduce el asunto'
                     onChange={handleChange}
                     value={mascota}
                 />
 
-                <label>Nombre Dueño</label>
+                <label>Cliente</label>
                 <input
                     type='text'
                     name='propietario'
                     className="u-full-width"
-                    placeholder='Nombre dueño de la mascota'
+                    placeholder='Introduce el nombre del cliente'
                     onChange={handleChange}
                     value={propietario}
                 />
@@ -103,7 +103,7 @@ const Formulario = ({ crearCita }) => {
                     value={hora}
 
                 />
-                <label>Síntomas</label>
+                <label>Comentarios</label>
                 <textarea
                     className="u-full-width"
                     name="sintomas"
@@ -114,7 +114,7 @@ const Formulario = ({ crearCita }) => {
 
                 <button
                     type="submit"
-                    className="u-full-width button-primary"
+                    className="u-full-width"
                 >
                     Agregar cita
                 </button>
